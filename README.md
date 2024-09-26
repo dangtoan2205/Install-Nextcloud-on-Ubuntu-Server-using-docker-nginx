@@ -59,7 +59,7 @@ services:
     ports:
       - "81:80"
     environment:
-      - JWT_SECRET=your_secret_key  # Change this
+      - JWT_SECRET=adminlocal123a@  # Change this
 
 volumes:
   nextcloud_data:
@@ -128,7 +128,7 @@ After setting up Nextcloud, you need to integrate OnlyOffice. Here’s how:
 
 1. Go to the Nextcloud apps section.
 2. Search for and install the "OnlyOffice" app.
-3 .Once installed, go to the settings of the OnlyOffice app and configure the Document Server URL as `http://192.168.10.26`.
+3 .Once installed, go to the settings of the OnlyOffice app and configure the Document Server URL as `http://192.168.10.26:8080`.
 
 ## Step 8: Final Configuration
 Make sure to set the proper permissions for the Nextcloud data directory.
