@@ -96,6 +96,7 @@ server {
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
         proxy_set_header X-Forwarded-Proto $scheme;
     }
+    client_max_body_size 2G;  # Allow larger uploads
 }
 
 server {
@@ -110,6 +111,50 @@ server {
         proxy_set_header X-Forwarded-Proto $scheme;
     }
 }
+```
+
+---
+Update file upto 10Gb
+---
+
+cd /etc/nginx/sites-available/nextcloud
+```
+server {
+    ...
+    client_max_body_size 2G;  # Allow larger uploads
+    ...
+}
+```
+
+Modify PHP Configuration
+If you're using PHP-FPM, you need to adjust the PHP settings for your Docker container. 
+You can do this in your `Dockerfile` or by creating a custom `php.ini` file. Add or update these settings:
+```
+upload_max_filesize = 2G
+post_max_size = 2G
+memory_limit = 512M
+```
+
+Update Docker Compose (if applicable)
+If you're using Docker Compose, make sure you include the environment variables in your `docker-compose.yml`:
+```
+services:
+  app:
+    ...
+    environment:
+      - PHP_UPLOAD_MAX_FILESIZE=2G
+      - PHP_POST_MAX_SIZE=2G
+```
+
+Restart Services
+```
+# If using Docker Compose
+docker-compose down
+docker-compose up -d
+
+# If using systemd for Nginx and PHP-FPM
+sudo systemctl restart nginx
+sudo systemctl restart php7.x-fpm  # replace with your PHP version
 ```
 
 ## Step 5: Enable the Nginx Configuration
