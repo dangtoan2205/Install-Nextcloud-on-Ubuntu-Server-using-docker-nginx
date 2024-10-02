@@ -6,6 +6,82 @@ Prerequisites
 2. Docker and Docker Compose installed.
 3. Basic knowledge of Docker and Nginx.
 
+---
+Install Nginx for Ubuntu Server
+---
+```
+sudo apt update
+sudo apt upgrade
+```
+1. Install Nginx
+   
+```
+sudo apt install nginx
+```
+
+2. Start nginx and status
+
+```
+sudo systemctl start nginx
+sudo systemctl status nginx
+```
+
+3. Configure Firewall
+```
+sudo ufw allow 'Nginx Full'
+```
+
+```
+Tệp cấu hình chính của Nginx nằm ở /etc/nginx/nginx.conf, và các tệp cấu hình cho từng trang web thường nằm trong thư mục
+ /etc/nginx/sites-available/. Bạn có thể tạo một tệp mới để cấu hình cho trang web của mình.
+```
+
+```
+sudo systemctl restart nginx
+```
+
+---
+Install Docker for Ubuntu Server
+---
+1. Update system
+```
+sudo apt update
+sudo apt upgrade -y
+```
+2. Install Required Packages
+```
+sudo apt install apt-transport-https ca-certificates curl software-properties-common -y
+```
+3. Add Docker’s Official GPG Key
+```
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+```
+4. Add Docker’s Repository
+```
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+```
+5. Update APT Index Again
+```
+sudo apt update
+```
+6. Install Docker Engine
+```
+sudo apt install docker-ce -y
+```
+7. Start and Enable Docker
+```
+sudo systemctl start docker
+sudo systemctl enable docker
+```
+8. Verify Docker Installation
+```
+sudo docker --version
+```
+9. Manage Docker as a Non-Root User (Optional)
+```
+sudo usermod -aG docker $USER
+```
+
 ## Step 1: Install Docker and Docker Compose
 If you haven’t already installed Docker and Docker Compose, you can do so by running:
 ```
