@@ -241,8 +241,8 @@ services:
 Restart Services
 If using Docker Compose
 ```
-docker-compose down
-docker-compose up -d
+sudo docker-compose down
+sudo docker-compose up -d
 ```
 
 If using systemd for Nginx and PHP-FPM
