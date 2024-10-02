@@ -184,7 +184,7 @@ server {
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
         proxy_set_header X-Forwarded-Proto $scheme;
     }
-    client_max_body_size 2G;  # Allow larger uploads
+    client_max_body_size 10G;  # Allow larger uploads
 }
 
 server {
@@ -198,12 +198,11 @@ server {
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
         proxy_set_header X-Forwarded-Proto $scheme;
     }
-    client_max_body_size 10G;  # Allow larger uploads
 }
 ```
 
 ---
-Update file upto 10Gb
+Update file upto 10Gb (da co)
 ---
 
 ```
