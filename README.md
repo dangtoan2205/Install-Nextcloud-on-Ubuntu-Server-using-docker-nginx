@@ -198,6 +198,7 @@ server {
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
         proxy_set_header X-Forwarded-Proto $scheme;
     }
+    client_max_body_size 10G;  # Allow larger uploads
 }
 ```
 
@@ -205,7 +206,11 @@ server {
 Update file upto 10Gb
 ---
 
-cd /etc/nginx/sites-available/nextcloud
+```
+cd /etc/nginx/sites-available
+sudo nano nuxtcloud
+```
+
 ```
 server {
     ...
