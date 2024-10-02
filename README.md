@@ -208,7 +208,7 @@ Update file upto 10Gb
 
 ```
 cd /etc/nginx/sites-available
-sudo nano nuxtcloud
+sudo nano nextcloud
 ```
 
 ```
