@@ -82,6 +82,18 @@ sudo docker --version
 sudo usermod -aG docker $USER
 ```
 
+---
+Install Nextcloud
+---
+
+```
+sudo snap install nextcloud
+sudo nextcloud.manual-install netvn password
+sudo nextcloud.occ config:system:set trusted_domains 1 --value=*
+sudo nextcloud.enable-https self-signed
+sudo ufw allow 80,443/tcp
+```
+
 ## Step 1: Install Docker and Docker Compose
 If you haven’t already installed Docker and Docker Compose, you can do so by running:
 ```
