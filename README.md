@@ -189,7 +189,7 @@ server {
 
 server {
     listen 80;
-    server_name 192.168.10.26;  # Change this to your OnlyOffice IP
+    server_name 192.168.26.10;  # Change this to your OnlyOffice IP
 
     location / {
         proxy_pass http://localhost:81;
