@@ -239,12 +239,14 @@ services:
 ```
 
 Restart Services
+If using Docker Compose
 ```
-# If using Docker Compose
 docker-compose down
 docker-compose up -d
+```
 
-# If using systemd for Nginx and PHP-FPM
+If using systemd for Nginx and PHP-FPM
+```
 sudo systemctl restart nginx
 sudo systemctl restart php7.x-fpm  # replace with your PHP version
 ```
