@@ -268,7 +268,9 @@ After setting up Nextcloud, you need to integrate OnlyOffice. Here’s how:
 1. Go to the Nextcloud apps section.
 2. Search for and install the "OnlyOffice" app.
 3 .Once installed, go to the settings of the OnlyOffice app and configure the Document Server URL as `http://192.168.10.26:8080`.
-![image](https://github.com/user-attachments/assets/e4032680-da11-4305-bd55-db39cc18cc7e)
+
+![image](https://github.com/user-attachments/assets/14d1928e-6008-402d-8809-fb94badf3409)
+
 
 
 ## Step 8: Final Configuration
