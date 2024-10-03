@@ -2,12 +2,19 @@ Configuring Zoho Mail as your email server in Nextcloud involves a few key steps
 ---
 
 # Step 1: Set Up Zoho Mail
-Enable IMAP:</br>
+1/ Enable IMAP Zoho App:</br>
+Settings > Mail accounts > IMAP
+Select: IMAP Access, Auto-Expunge Emails, Include Archived emails
+![image](https://github.com/user-attachments/assets/8a12394e-9306-47f3-aa49-b048c8ddf426)
+![image](https://github.com/user-attachments/assets/d376da6d-a707-4713-90e5-71ac74ce27ef)
+
+2/
 Log in to your Zoho Mail account: 
 https://accounts.zoho.com/signin?servicename=AaaServer&serviceurl=https%3A%2F%2Faccounts.zoho.com%2Fhome
 
 Go to Settings > Mail Accounts > IMAP Access and ensure that IMAP is enabled.
-Step 2: Configure Nextcloud Mail App
+
+# Step 2: Configure Nextcloud Mail App
 Install the Mail App:
 
 Log in to your Nextcloud instance.
