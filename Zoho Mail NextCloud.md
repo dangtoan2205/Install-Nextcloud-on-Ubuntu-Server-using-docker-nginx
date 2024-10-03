@@ -48,14 +48,27 @@ Security: SSL/TLS
 Authentication: Normal password
 Save Settings: After entering all the details, save your settings.
 ```
-Step 3: Test the Configuration
-Send and Receive Emails: Try sending and receiving emails to ensure everything is configured correctly.
-Check for Errors: If you encounter issues, double-check the settings, especially the server addresses, ports, and security settings.
-Troubleshooting
-Connection Issues: Ensure that your Nextcloud server can connect to the Zoho Mail servers. Check firewall settings if necessary.
-Authentication Failures: Make sure you are using the correct email and password. You may also need to enable "Allow less secure apps" in your Zoho account settings if you face issues.
-Two-Factor Authentication: If you have 2FA enabled on Zoho, you might need to create an app-specific password for Nextcloud.
-Additional Tips
-Backup: Always back up your Nextcloud data before making major changes.
-Documentation: Refer to the Nextcloud Mail app documentation and Zoho Mail support for any specific configurations or updates.
-This should help you get your Zoho Mail configured in Nextcloud! If you run into any specific issues, feel free to ask for more help.
+
+```
+Connect your mail account > Manual
+Name: Dang Toan
+Mail address: toan.dang@seta-international.vn
+
+IMAP Settings
+IMAP Host: imappro.zoho.com
+IMAP Security *
+SSL/TLS
+IMAP Port: 993
+IMAP User: toan.dang@seta-international.vn
+IMAP Password: Pawword copy in Website Zoho account (App Pawword > Nextcloud)
+
+SMTP Settings
+SMTP Host: smtppro.zoho.com
+IMAP Security *
+SMTP Port: 465
+SMTP User: toan.dang@seta-international.vn
+SMTP Password: Pawword copy in Website Zoho account (App Pawword > Nextcloud)
+
+Connect
+```
+
