@@ -18,23 +18,23 @@ Copy Password   </br>
 ![image](https://github.com/user-attachments/assets/4f6e6097-ba16-4f9b-97e7-2c49d691f607)
 
 # Step 2: Configure Nextcloud Mail App
-Install the Mail App:
+Install the Mail App:  </br>
 
-Log in to your Nextcloud instance.
-Go to the Apps section and find the Mail app. Install it if you haven’t done so.
-Access Mail Settings:
+Log in to your Nextcloud instance. </br>
+Go to the Apps section and find the Mail app. Install it if you haven’t done so. </br>
+Access Mail Settings: </br>
 
-After installing, navigate to the Mail app.
-Click on the Settings icon (usually a gear or wrench icon).
-Add Your Zoho Account:
+After installing, navigate to the Mail app. </br>
+Click on the Settings icon (usually a gear or wrench icon). </br>
+Add Your Zoho Account: </br>
 
-Select Add Account or similar option.
-Fill in the required information:
-Email Address: Your full Zoho email address (e.g., you@yourdomain.com).
-Username: Your full Zoho email address again.
-Password: Your Zoho email password.
-Configure Incoming Server:
-
+Select Add Account or similar option. </br>
+Fill in the required information: </br>
+Email Address: Your full Zoho email address (e.g., you@yourdomain.com). </br>
+Username: Your full Zoho email address again. </br>
+Password: Your Zoho email password. </br>
+Configure Incoming Server: </br>
+```
 Server Type: IMAP
 Server Address: imap.zoho.com
 Port: 993
@@ -47,7 +47,7 @@ Port: 465 (SSL) or 587 (TLS)
 Security: SSL/TLS
 Authentication: Normal password
 Save Settings: After entering all the details, save your settings.
-
+```
 Step 3: Test the Configuration
 Send and Receive Emails: Try sending and receiving emails to ensure everything is configured correctly.
 Check for Errors: If you encounter issues, double-check the settings, especially the server addresses, ports, and security settings.
